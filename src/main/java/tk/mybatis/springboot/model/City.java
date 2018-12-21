@@ -29,9 +29,19 @@ package tk.mybatis.springboot.model;
  * @since 2016-01-22 22:16
  */
 public class City extends BaseEntity {
+
+
     private String name;
 
     private String state;
+
+    public City() {
+    }
+
+    public City(String name, String state) {
+        this.name = name;
+        this.state = state;
+    }
 
     public String getName() {
         return name;

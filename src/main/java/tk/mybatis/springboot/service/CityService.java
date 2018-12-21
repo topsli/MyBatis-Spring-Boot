@@ -42,6 +42,11 @@ public class CityService {
     @Autowired
     private CityMapper cityMapper;
 
+    public List<City> insertList(List<City> list){
+        cityMapper.insertList(list);
+        return list;
+    }
+
     public List<City> getAll(City city) {
         if (city.getPage() != null && city.getRows() != null) {
             PageHelper.startPage(city.getPage(), city.getRows());
